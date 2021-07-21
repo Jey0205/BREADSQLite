@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=
+    , initial-scale=1.0" />
+    <title>Data</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <b>
+        <h1>BREAD (Browse, Read, Edit, Add, Delete)</h1>
+    </b>
+    <h2>Filter</h2>
+
+    <form action="" method="get">
+        <input type="hidden" name="page" value="1">
+
+        <input type="checkbox" id="checkString" onclick="clickedStr()" name="checkString" <%=string ? ' checked' : '' %>
+        />
+        <label for="string">String</label>
+        <input type="text" id="string" name="string" placeholder="String.." value="<%= string %>" <%=string ? ''
+            : ' disabled' %>/>
+
+        <input type="checkbox" id="checkInteger" onclick="clickedInt()" <%=integer ? ' checked' : '' %> >
+        <label for="integer">Integer</label>
+        <input type="number" id="integer" name="integer" placeholder="Integer.." value="<%= integer %>" <%=integer ? ''
+            : ' disabled' %> />
+
+        <input type="checkbox" id="checkFloat" onclick="clickedFlt()" <%=float ? ' checked' : '' %> >
+        <label for="float">Float</label>
+        <input type="number" step="0.01" id="float" name="float" placeholder="Float.." value="<%= float %>" <%=float
+            ? '' : ' disabled' %> />
+
+        <input type="checkbox" id="checkDate" onclick="clickedDate()" <%=start ? ' checked' : '' %> >
+        <label for="date">Date</label>
+        <input id="start" class="date-search" name="start" type="date" value="<%= start %>" <%=start ? '' : ' disabled'
+            %> > to
+        <input id="end" class="date-search" name="end" type="date" value="<%= end %>" <%=end ? '' : ' disabled' %> >
+
+
+        <input type="checkbox" id="checkBoolean" onclick="clickedBoo()" <%=boolean ? ' checked' : '' %> >
+        <label for="boolean">Boolean</label>
+        <select name="boolean" id="boolean" <%=boolean ? '' : ' disabled' %> >
+            <option hidden>Choose the boolean..</option>
+            <option value="True" <%=boolean=='True' ? ' selected' : '' %> >True</option>
+            <option value="False" <%=boolean=='False' ? ' selected' : '' %>>False</option>
+        </select>
+
+        <button type="submit" class="btn-search">Search</button>
+        <a href="/" class="btn-reset">Reset</a>
+    </form>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>String</th>
+            <th>Integer</th>
+            <th>Float</th>
+            <th>Date</th>
+            <th>Boolean</th>
+            <th>Action</th>
+        </tr>
+        <% data.forEach((item)=> { %>
+            <tr>
+                <td>
+                    <%= item.id%>
+                </td>
+                <td>
+                    <%= item.string %>
+                </td>
+                <td>
+                    <%= item.integer %>
+                </td>
+                <td>
+                    <%= item.float %>
+                </td>
+                <td id="date">
+                    <%= moment(item.date).format("DD MMMM YYYY","LL") %>
+                </td>
+                <td id="boolean">
+                    <%= item.boolean %>
+                </td>
+                <td>
+                    <a href="/edit/<%= item.id %>" class="btn-edit">Edit</a>
+                    <a href="/delete/<%= item.id %>" class="btn-delete">Delete</a>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+    <div class="pagination">
+        <% if(page> 1){ %>
+            <a class="btn-prev" href="<%= url.replace(`page=${page}`, `page=${page - 1}`)%>">Previous</a>
+            <% } %>
+                <% for(let i=1; i <=pages; i++){ %>
+                    <a class="btn-numl" href="<%= url.replace(`page=${page}`, `page=${i}`) %> ">
+                        <%= i %>
+                    </a>
+                    <% } %>
+                        <% if(page < pages){ %>
+                            <a class="btn-next" href="<%= url.replace(`page=${page}`, `page=${page + 1}`)%>">Next</a>
+                            <% } %>
+    </div>
+    <a href="/add" class="btn-add">Add</a>
+    </form>
+    <script>
+        function clickedStr() {
+            const check = document.getElementById('checkString')
+            if (check.checked == true) {
+                document.getElementById('string').disabled = false;
+            } else {
+                document.getElementById('string').disabled = true;
+            }
+        }
+        function clickedInt() {
+            const check = document.getElementById('checkInteger')
+            if (check.checked == true) {
+                document.getElementById('integer').disabled = false;
+            } else {
+                document.getElementById('integer').disabled = true;
+            }
+        }
+        function clickedFlt() {
+            const check = document.getElementById('checkFloat')
+            if (check.checked == true) {
+                document.getElementById('float').disabled = false;
+            } else {
+                document.getElementById('float').disabled = true;
+            }
+        }
+        function clickedDate() {
+            const check = document.getElementById('checkDate')
+            if (check.checked == true) {
+                document.getElementById('start').disabled = false;
+                document.getElementById('end').disabled = false;
+            } else {
+                document.getElementById('start').disabled = true;
+                document.getElementById('end').disabled = true;
+            }
+        }
+        function clickedBoo() {
+            const check = document.getElementById('checkBoolean')
+            if (check.checked == true) {
+                document.getElementById('boolean').disabled = false;
+            } else {
+                document.getElementById('boolean').disabled = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

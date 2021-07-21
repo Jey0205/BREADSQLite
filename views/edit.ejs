@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <h1 style="font-family: cursive;"> Edit Data </h1>
+    <form action="" method="POST">
+        <label for="string">String</label>
+        <input  type="text" name="string" value="<%= data.string %>"/>
+        <label for="integer">Integer</label>
+        <input  type="number" name="integer" value="<%= data.integer %>"/>
+        <label for="float">Float</label>
+        <input type="number" name="float" value="<%= data.float %>"/>
+        <label for="date"> Date</label>
+        <input type="date" name="date" value="<%= data.date %>"/>
+        <label for="boolean">Boolean</label>
+        <select name="boolean" id="boolean" value="<%= data.boolean %>">
+            <option value="Kosong" hidden> Pilih salah satu!</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+          </select>
+
+            <button type="submit" class="btn-update">Update</button>
+            <a href="/" class="btn-cancel">Cancel</a>
+    </form>
+   
+</body>
+
+</html>

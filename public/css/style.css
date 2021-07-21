@@ -1,0 +1,252 @@
+
+h1{
+    font-family: cursive;
+}
+h2{
+  font-family: cursive;
+}
+
+.table {
+    font-family: cursive;
+    color: #444;
+    border-collapse: collapse;
+    font-size: 18px;
+    border: 1px solid #f2f5f7;
+    width: 80%;
+  }
+  
+  .table tr th {
+    background: #fff;
+    color: black;
+  }
+  
+  .table,
+  th,
+  td {
+    padding: 8px 20px;
+    text-align: center;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  a.btn-prev{
+    background-color: #c014a9;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    font-family: cursive;
+    display: inline-block;
+    border-radius: 15px;  
+  }
+  a.btn-numl{
+    background-color: #c014a9;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    font-family: cursive;
+    display: inline-block;
+    border-radius: 15px;
+    
+  }
+  a.btn-next{
+    background-color: #c014a9;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    font-family: cursive;
+    display: inline-block;
+    border-radius: 15px;
+    
+  }
+
+button.btn-search{  
+  background-color: #1f3b96;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-align: center;
+  font-family: cursive;
+  display: inline-block;
+  border-radius: 15px;
+}
+button.btn-search:hover{
+background-color: #829fff;
+}
+
+
+a.btn-reset{
+  background-color: #08c7e9;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    font-family: cursive;
+    display: inline-block;
+    border-radius: 5px;
+}
+a.btn-reset:hover{
+  background-color: #8eebfc;
+}
+
+
+a.btn-add{
+    background-color: #1f3b96;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    font-family: cursive;
+    display: inline-block;
+    border-radius: 15px;
+}
+a.btn-add:hover{
+background-color: #829fff;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: cursive;
+  }
+  .btn-delete :hover {
+    background-color: #df6b77;
+  }
+  .btn-edit {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px ; 
+    font-family: cursive;
+  }
+  .btn-edit :hover {
+    background-color: #73d68a;
+  }
+  .btn-save{
+   
+    background-color: #1f3b96;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: cursive;
+    border-radius: 15px 15px;
+  } 
+  .btn-save:hover{
+    background-color: #5c7add;
+  }
+  .btn-update{
+   
+    background-color: #4465d3;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: cursive;
+    border-radius: 15px 15px;
+  } 
+  .btn-update:hover{
+    background-color: #5c7add;
+  }
+
+  .btn-cancel{
+   
+    background-color: #c70b0b;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: cursive;
+    border-radius: 15px 15px;
+  } 
+  .btn-cancel:hover{
+    background-color: #ee6d6d;
+  }
+input{
+    font-family: cursive
+}
+input[type="text"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="number"]{
+      width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="date"]{
+      width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  select{
+    font-family: cursive;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  label{
+    font-family: cursive;
+  }
